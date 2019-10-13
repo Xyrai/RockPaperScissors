@@ -12,12 +12,12 @@ class Converters {
 
     @TypeConverter
     fun dateToTimestamp(date: Date?): Long? {
-        return date?.time?.toLong()
+        return date?.time
     }
 
     @TypeConverter
     fun fromInt(move: Int?): Move? {
-        when(move) {
+        when (move) {
             Move.rock.image -> {
                 return Move.rock
             }
@@ -33,6 +33,6 @@ class Converters {
 
     @TypeConverter
     fun moveToInt(move: Move?): Int? {
-        return move?.image?.toInt()
+        return move?.image
     }
 }

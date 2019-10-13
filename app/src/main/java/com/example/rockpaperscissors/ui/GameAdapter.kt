@@ -33,8 +33,8 @@ class GameAdapter (private val games: List<Game>)
         fun bind(game: Game) {
             itemView.result.text = game.getResult().result
             itemView.gameDate.text = game.date.toString()
-            itemView.computerMove.setImageDrawable(context.getDrawable(game.computerMove.image))
-            itemView.yourMove.setImageDrawable(context.getDrawable(game.yourMove.image))
+            itemView.ivComputer.setImageDrawable(context.getDrawable(game.computerMove.image))
+            itemView.ivYou.setImageDrawable(context.getDrawable(game.yourMove.image))
         }
     }
 

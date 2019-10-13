@@ -10,7 +10,7 @@ import com.example.rockpaperscissors.model.Game
 
 @Database(entities = [Game::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
-abstract class GameRoomDatabase: RoomDatabase() {
+abstract class GameRoomDatabase : RoomDatabase() {
 
     abstract fun gameDao(): GameDao
 
@@ -25,7 +25,8 @@ abstract class GameRoomDatabase: RoomDatabase() {
                 synchronized(GameRoomDatabase::class.java) {
                     if (GameRoomDatabaseInstance == null) {
                         GameRoomDatabaseInstance =
-                            Room.databaseBuilder(context.applicationContext,
+                            Room.databaseBuilder(
+                                context.applicationContext,
                                 GameRoomDatabase::class.java,
                                 DATABASE_NAME
                             )

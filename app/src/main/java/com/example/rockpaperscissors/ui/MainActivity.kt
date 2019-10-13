@@ -49,13 +49,13 @@ class MainActivity : AppCompatActivity() {
 
             games.forEach {
                 when (it.getResult()) {
-                    GameResult.win -> {
+                    GameResult.Win -> {
                         win += 1
                     }
-                    GameResult.draw -> {
+                    GameResult.Draw -> {
                         draw += 1
                     }
-                    GameResult.lose -> {
+                    GameResult.Lose -> {
                         lose += 1
                     }
                 }
